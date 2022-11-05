@@ -1,0 +1,26 @@
+.time-loc-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.time-container {
+    font-size: 14px;
+}
+
+.loc-container {
+    font-size: 27px;
+    margin-top: 8px;
+    font-weight: bolder;
+}
+
+@media screen and (min-width: 480px) {
+    .time-container {
+        font-size: 16px;
+    }
+
+    .loc-container {
+        font-size: 29px;
+    }
+}

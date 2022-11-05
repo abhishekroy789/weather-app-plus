@@ -6,6 +6,26 @@
 }
 
 .city-container span {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: bold;
+}
+
+@media screen and (min-width: 480px) {
+    .city-container span {
+        font-size: 16px;
+    }
+
+    .city-container {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .city-container span {
+        font-size: 18px;
+    }
+
+    .city-container {
+        width: 100%;
+    }
 }
