@@ -1,9 +1,11 @@
 import React from "react";
+import "./App.css";
+import QuickCities from "./components/QuickCities/QuickCities";
 
 function App() {
   return (
-    <div>
-      <h1>hello world</h1>
+    <div className="App">
+      <QuickCities />
     </div>
   );
 }

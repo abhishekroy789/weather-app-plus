@@ -1,0 +1,11 @@
+.city-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.city-container span {
+    font-size: 17px;
+    font-weight: bold;
+}

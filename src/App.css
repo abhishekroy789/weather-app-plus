@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem;
+    background-color: red;
+}
+
+
+@media screen and (min-width: 480px) {
+    .App {
+        background-color: blue;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .App {
+        background-color: green;
+        width: 70%;
+        margin: auto;
+    }
+}
