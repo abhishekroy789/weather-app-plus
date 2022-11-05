@@ -19,15 +19,12 @@
 }
 
 
-@media screen and (min-width: 480px) {
-    .App {
-        background-color: blue;
-    }
-}
+/* @media screen and (min-width: 480px) {
+    
+} */
 
 @media screen and (min-width: 769px) {
     .App {
-        background-color: green;
         width: 50%;
         margin: auto;
     }

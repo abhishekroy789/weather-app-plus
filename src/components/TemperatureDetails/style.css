@@ -1,0 +1,22 @@
+.weather-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;    
+}
+
+.current {
+    font-size: 80px;
+}
+
+.current sup {
+    font-size: 40px;
+}
+
+.min-max {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}

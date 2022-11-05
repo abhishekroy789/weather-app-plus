@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import QuickCities from "./components/QuickCities/QuickCities";
 import SearchBar from "./components/SearchBar/SearchBar";
+import TemperatureDetails from "./components/TemperatureDetails/TemperatureDetails";
 import TimeAndLocation from "./components/TimeAndLocation/TimeAndLocation";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <QuickCities />
       <SearchBar />
       <TimeAndLocation />
+      <TemperatureDetails />
     </div>
   );
 }
