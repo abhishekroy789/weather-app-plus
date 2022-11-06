@@ -1,0 +1,54 @@
+.forecast-container {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.forecast-container p {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 5px 5px;
+}
+
+.forecast-wrapper {
+    display: flex;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+.forecast-wrapper div {
+    margin-right: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.forecast-wrapper div span {
+    font-size: 15px;
+    font-weight: unset;
+}
+
+.forecast-wrapper div img {
+    width: 70px;
+    height: 70px;
+}
+
+.forecast-wrapper div p {
+    font-size: 15px;
+    font-weight: unset;
+}
+
+.forecast-wrapper::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+@media screen and (min-width:480px){
+    .forecast-wrapper div {
+        width: 9rem;
+        margin-right: 10px;
+    }
+}

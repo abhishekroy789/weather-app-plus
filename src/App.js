@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Forecast from "./components/Forecast/Forecast";
 import OtherDetails from "./components/OtherDetails/OtherDetails";
 import QuickCities from "./components/QuickCities/QuickCities";
 import SearchBar from "./components/SearchBar/SearchBar";
@@ -16,6 +17,7 @@ function App() {
       <TemperatureDetails />
       <SunDeatails />
       <OtherDetails />
+      <Forecast />
     </div>
   );
 }
