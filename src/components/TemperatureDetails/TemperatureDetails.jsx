@@ -1,31 +1,31 @@
 import React from "react";
 import "./style.css";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
+import { iconUrlFromCode } from "../../services/WeatherService";
 
-const TemperatureDetails = () => {
+const TemperatureDetails = ({
+  weather: { details, icon, temp, temp_min, temp_max, feels_like },
+}) => {
   return (
     <>
       <div className="weather-container">
-        <img
-          alt="weather icon"
-          src="http://openweathermap.org/img/wn/01n@2x.png"
-        />
+        <img alt="weather icon" src={iconUrlFromCode(icon)} />
         <div className="current">
-          25
+          {`${temp.toFixed()}`}
           <sup>°C</sup>
         </div>
         <div className="min-max">
           <span>
-            <AiOutlineArrowUp /> 25°C
+            <AiOutlineArrowUp /> {`${temp_max.toFixed()}`}°C
           </span>
           <span>
-            <AiOutlineArrowDown /> 25°C
+            <AiOutlineArrowDown /> {`${temp_min.toFixed()}`}°C
           </span>
         </div>
       </div>
       <div className="weather-description">
-        <span>Feels Like : 25°C</span>
-        <p>Clear</p>
+        <span>Feels Like : {`${feels_like.toFixed()}`}°C</span>
+        <p>{details}</p>
       </div>
     </>
   );

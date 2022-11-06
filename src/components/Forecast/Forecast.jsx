@@ -1,78 +1,21 @@
 import React from "react";
 import "./style.css";
+import { iconUrlFromCode } from "../../services/WeatherService";
 
-const Forecast = () => {
+const Forecast = ({ items }) => {
   return (
     <div className="forecast-container">
       <p>Forecast</p>
-      <hr/>
+      <hr />
 
       <div className="forecast-wrapper">
-        <div>
-        <span>05:21 Am</span>
-        <img
-          alt="weather icon"
-          src="http://openweathermap.org/img/wn/01n@2x.png"
-        />
-        <p>25°C</p>
-        </div>
-        {/* Dummy */}
-        <div>
-        <span>05:21 Am</span>
-        <img
-          alt="weather icon"
-          src="http://openweathermap.org/img/wn/01n@2x.png"
-        />
-        <p>25°C</p>
-        </div>
-        <div>
-        <span>05:21 Am</span>
-        <img
-          alt="weather icon"
-          src="http://openweathermap.org/img/wn/01n@2x.png"
-        />
-        <p>25°C</p>
-        </div>
-        <div>
-        <span>05:21 Am</span>
-        <img
-          alt="weather icon"
-          src="http://openweathermap.org/img/wn/01n@2x.png"
-        />
-        <p>25°C</p>
-        </div>
-        <div>
-        <span>05:21 Am</span>
-        <img
-          alt="weather icon"
-          src="http://openweathermap.org/img/wn/01n@2x.png"
-        />
-        <p>25°C</p>
-        </div>
-        <div>
-        <span>05:21 Am</span>
-        <img
-          alt="weather icon"
-          src="http://openweathermap.org/img/wn/01n@2x.png"
-        />
-        <p>25°C</p>
-        </div>
-        <div>
-        <span>05:21 Am</span>
-        <img
-          alt="weather icon"
-          src="http://openweathermap.org/img/wn/01n@2x.png"
-        />
-        <p>25°C</p>
-        </div>
-        <div>
-        <span>05:21 Am</span>
-        <img
-          alt="weather icon"
-          src="http://openweathermap.org/img/wn/01n@2x.png"
-        />
-        <p>25°C</p>
-        </div>
+        {items.map((item, index) => (
+          <div key={index}>
+            <span>{item.title}</span>
+            <img alt="weather icon" src={iconUrlFromCode(item.icon)} />
+            <p>{`${item.temp.toFixed()}`}°C</p>
+          </div>
+        ))}
       </div>
     </div>
   );

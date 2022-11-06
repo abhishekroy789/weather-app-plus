@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const QuickCities = () => {
+const QuickCities = ({ setQuery }) => {
   const cities = [
     {
       id: 1,
@@ -27,8 +27,10 @@ const QuickCities = () => {
 
   return (
     <div className="city-container">
-      { cities.map((city) => (
-        <span key={city.id} >{city.title}</span>
+      {cities.map((city) => (
+        <span key={city.id} onClick={() => setQuery({ q: city.title })}>
+          {city.title}
+        </span>
       ))}
     </div>
   );

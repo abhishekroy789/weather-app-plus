@@ -1,14 +1,15 @@
 import "./style.css";
 import React from "react";
+import { formatToLocalTime } from "../../services/WeatherService";
 
-const TimeAndLocation = () => {
+const TimeAndLocation = ({ weather: { dt, timezone, name, country } }) => {
   return (
     <div className="time-loc-container">
       <div className="time-container">
-        <span>Saturday, 05 Nov 2022 | Local time: 07:32 PM</span>
+        <span>{formatToLocalTime(dt, timezone)}</span>
       </div>
       <div className="loc-container">
-        <span>Bhilai, IN</span>
+        <span>{`${name}, ${country}`}</span>
       </div>
     </div>
   );

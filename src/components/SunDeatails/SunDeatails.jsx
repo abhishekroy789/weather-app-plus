@@ -1,8 +1,9 @@
 import React from "react";
 import "./style.css";
 import { BsSunriseFill, BsSunsetFill } from "react-icons/bs";
+import { formatToLocalTime } from "../../services/WeatherService";
 
-const SunDeatails = () => {
+const SunDeatails = ({ weather: { sunrise, sunset, timezone } }) => {
   return (
     <div className="sun-container">
       <div className="sun-details">
@@ -10,14 +11,14 @@ const SunDeatails = () => {
           <BsSunriseFill />
         </i>
         <p>Sun Rise</p>
-        <span>05:21 AM</span>
+        <span>{formatToLocalTime(sunrise, timezone, "hh:mm a")}</span>
       </div>
       <div className="sun-details">
         <i>
           <BsSunsetFill />
         </i>
         <p>Sun Set</p>
-        <span>05:21 PM</span>
+        <span>{formatToLocalTime(sunset, timezone, "hh:mm a")}</span>
       </div>
     </div>
   );
