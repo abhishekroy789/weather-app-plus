@@ -14,7 +14,8 @@
     align-items: center;
     font-family: 'Poppins', sans-serif;
     padding: 1rem;
-    background: linear-gradient(to right, cyan, blue);
+    /* background: linear-gradient(to right, dodgerblue, blue); */
+    background: linear-gradient(to right, orange, orangered);
     color: white;
 }
 
